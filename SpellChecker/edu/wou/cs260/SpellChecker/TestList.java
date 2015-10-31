@@ -1,4 +1,3 @@
-package edu.wou.cs260.SpellChecker;
 
 import java.util.ArrayList;
 
