@@ -1,8 +1,7 @@
-package edu.wou.cs260.SpellChecker;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert;
 import java.util.Iterator;
 import org.junit.Test;
+import TestList.java;
 
 /**
  * JUnit tests for some of the List interface methods in Lab#2
@@ -14,11 +13,11 @@ import org.junit.Test;
 public class DLListTester {
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#size()}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#size()}.
 	 */
 	@Test
 	public void testSize() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		assertEquals("Size must be 0 after constructor", 0, testList.size());
 		testList.clear( );
 		assertEquals("Size must be 0 after clear", 0, testList.size());
@@ -47,11 +46,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#isEmpty()}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#isEmpty()}.
 	 */
 	@Test
 	public void testIsEmpty() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		assertTrue("IsEmpty must be true after the constructor", testList.isEmpty());	
 		testList.clear( );
 		assertTrue("IsEmpty must be true after the clear", testList.isEmpty());	
@@ -71,11 +70,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#contains(java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#contains(java.lang.Object)}.
 	 */
 	@Test
 	public void testContains() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.clear( );
 		testList.add( 10);
 		testList.add( 20);
@@ -95,11 +94,11 @@ public class DLListTester {
 	}
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#contains(java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#contains(java.lang.Object)}.
 	 */
 	@Test(expected = NullPointerException.class)
 	public void testContainsExeption1() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		//Here is the real test for throwing exception
@@ -107,12 +106,12 @@ public class DLListTester {
 	}		
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#iterator()}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#iterator()}.
 	 */
 	@Test
 	public void testIterator() {
 		int sum = 0;
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.clear( );
 		testList.add( 10);
 		testList.add( 20);
@@ -128,11 +127,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#add(java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(java.lang.Object)}.
 	 */
 	@Test
 	public void testAddT() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		assertEquals("Tail of list must be 10 after the add", 10, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 20);
@@ -152,11 +151,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#add(java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(java.lang.Object)}.
 	 */
 	@Test(expected = NullPointerException.class)
 	public void testAddTExeption1() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		//Here is the real test for throwing exception
@@ -164,11 +163,11 @@ public class DLListTester {
 	}		
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#get(int)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#get(int)}.
 	 */
 	@Test
 	public void testGetInt() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.clear( );
 		testList.add( 10);
 		testList.add( 20);
@@ -186,11 +185,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#get(int)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#get(int)}.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testGetIntExeption1() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
@@ -200,11 +199,11 @@ public class DLListTester {
 	}	
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#get(int)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#get(int)}.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testGetIntExeption2() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
@@ -216,11 +215,11 @@ public class DLListTester {
 
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#remove(java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(java.lang.Object)}.
 	 */
 	@Test
 	public void testRemoveObject() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.clear( );
 		testList.add( 10);
 		testList.add( 20);
@@ -271,11 +270,11 @@ public class DLListTester {
 	}
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#remove(java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(java.lang.Object)}.
 	 */
 	@Test(expected = NullPointerException.class)
 	public void testRemoveObjectExeption1() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		//Here is the real test for throwing exception
@@ -284,11 +283,11 @@ public class DLListTester {
 	
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#clear()}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#clear()}.
 	 */
 	@Test
 	public void testClear() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.clear( );
 		testList.add( 10);
 		testList.add( 20);
@@ -310,11 +309,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#add(int, java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(int, java.lang.Object)}.
 	 */
 	@Test
 	public void testAddIntT() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 0, 10);
 		assertEquals("Tail of list must be 10 after the add", 10, (testList.get( 0)).intValue());
 		assertEquals("Size should be 1", 1, testList.size( ));
@@ -333,11 +332,11 @@ public class DLListTester {
 	}
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#add(int, java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(int, java.lang.Object)}.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testAddIntTExeption1() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
@@ -347,11 +346,11 @@ public class DLListTester {
 	}	
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#add(int, java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(int, java.lang.Object)}.
 	 */	
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testAddIntTExeption2() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
@@ -362,11 +361,11 @@ public class DLListTester {
 	
 
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#add(int, java.lang.Object)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(int, java.lang.Object)}.
 	 */	
 	@Test(expected = NullPointerException.class)
 	public void testAddIntTExeption3() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
@@ -376,11 +375,11 @@ public class DLListTester {
 	}	
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#remove(int)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(int)}.
 	 */
 	@Test
 	public void testRemoveInt() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.clear( );
 		testList.add( 10);
 		testList.add( 20);
@@ -405,11 +404,11 @@ public class DLListTester {
 	}
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#remove(int)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(int)}.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testRemoveIntTExeption1() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
@@ -419,17 +418,18 @@ public class DLListTester {
 	}	
 	
 	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.DLList#remove(int)}.
+	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(int)}.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testRemoveIntTExeption2() {
-		DLList<Integer> testList = new DLList<Integer>( ); 
+		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
 		testList.add( 20);
 		testList.add( 30);
 		testList.add( 40);
 		//Here is the real test for throwing exception
 		testList.remove( -1);
-	}	
+	}
+}
 		
 
