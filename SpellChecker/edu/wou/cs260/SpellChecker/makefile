@@ -16,7 +16,7 @@ SpellCheckUser.class : SpellCheckUser.java gitTasks
 TestList.class : TestList.java gitTasks
 	javac TestList.java
 	
-DLListTester.class : DLListTester.java gitTasks
+DLListTester.class : DLListTester.java TestList.class gitTasks
 	javac DLListTester.java
 	
 .PHONY: junitTest
