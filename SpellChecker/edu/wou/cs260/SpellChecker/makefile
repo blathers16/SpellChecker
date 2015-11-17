@@ -20,8 +20,8 @@ DLListTester.class : DLListTester.java gitTasks
 	javac DLListTester.java
 	
 .PHONY: junitTest
-junitTest : DLListTester.class
-	java org.junit.runner.JUnitCore.main("DLListTester.class") >> testlog.txt
+junitTest : DLListTester.class TestList.class
+	java org.junit.runner.JUnitCore.main("DLListTester.class") >> testlog.txt && rm DLListTester.class TestList.class
 .PHONY: gitTasks
 gitTasks :
 	git pull origin
