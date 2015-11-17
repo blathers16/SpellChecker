@@ -1,7 +1,6 @@
 import static org.junit.Assert.*;
 import java.util.Iterator;
 import org.junit.Test;
-import TestList.java;
 
 /**
  * JUnit tests for some of the List interface methods in Lab#2
