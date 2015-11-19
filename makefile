@@ -1,7 +1,7 @@
 classFiles =  CompareCount.class Dictionary.class FileParser.class \
 			SpellCheckUser.class TestList.class
 
-spellchecker : spellchecker.jar junitTest
+spellchecker : spellchecker.jar #junitTest
 			
 spellchecker.jar : $(classFiles)
 	jar cfe spellchecker.jar SpellCheckUser $(classFiles) && java -jar spellchecker.jar >> output.txt
