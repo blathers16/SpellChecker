@@ -92,17 +92,7 @@ public class DLListTester {
 		assertFalse("contains must return false for any element after a clear", testList.contains(45));
 	}
 	
-	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#contains(java.lang.Object)}.
-	 */
-	@Test(expected = NullPointerException.class)
-	public void testContainsExeption1() {
-		TestList<Integer> testList = new TestList<Integer>( ); 
-		testList.add( 10);
-		testList.add( 20);
-		//Here is the real test for throwing exception
-		testList.contains( null);
-	}		
+		
 
 	/**
 	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#iterator()}.
@@ -149,18 +139,7 @@ public class DLListTester {
 		assertEquals("Tail of list must be 45 after the add", 45, (testList.get( testList.size( ) - 1 )).intValue());
 	}
 
-	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(java.lang.Object)}.
-	 */
-	@Test(expected = NullPointerException.class)
-	public void testAddTExeption1() {
-		TestList<Integer> testList = new TestList<Integer>( ); 
-		testList.add( 10);
-		testList.add( 20);
-		//Here is the real test for throwing exception
-		testList.add( null);
-	}		
-	
+
 	/**
 	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#get(int)}.
 	 */
@@ -268,17 +247,6 @@ public class DLListTester {
 		assertEquals("size must be 0 after failed remove", 0, testList.size());	
 	}
 	
-	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(java.lang.Object)}.
-	 */
-	@Test(expected = NullPointerException.class)
-	public void testRemoveObjectExeption1() {
-		TestList<Integer> testList = new TestList<Integer>( ); 
-		testList.add( 10);
-		testList.add( 20);
-		//Here is the real test for throwing exception
-		testList.remove( null);
-	}	
 	
 
 	/**
@@ -359,19 +327,7 @@ public class DLListTester {
 	}	
 	
 
-	/**
-	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#add(int, java.lang.Object)}.
-	 */	
-	@Test(expected = NullPointerException.class)
-	public void testAddIntTExeption3() {
-		TestList<Integer> testList = new TestList<Integer>( ); 
-		testList.add( 10);
-		testList.add( 20);
-		testList.add( 30);
-		testList.add( 40);
-		//Here is the real test for throwing exception
-		testList.add( 1, null);
-	}	
+
 	
 	/**
 	 * Test method for {@link edu.ccc.cs260.SpellChecker.TestList#remove(int)}.
