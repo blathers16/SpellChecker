@@ -122,21 +122,21 @@ public class DLListTester {
 	public void testAddT() {
 		TestList<Integer> testList = new TestList<Integer>( ); 
 		testList.add( 10);
-		assertEquals("Tail of list must be 10 after the add", 10, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 10 after the add", 10, (testList.get( testList.size( ) -1  )).intValue());
 		testList.add( 20);
-		assertEquals("Tail of list must be 20 after the add", 20, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 20 after the add", 20, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 30);
-		assertEquals("Tail of list must be 30 after the add", 30, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 30 after the add", 30, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 40);
-		assertEquals("Tail of list must be 40 after the add", 40, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 40 after the add", 40, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 15);
-		assertEquals("Tail of list must be 15 after the add", 15, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 15 after the add", 15, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 25);
-		assertEquals("Tail of list must be 25 after the add", 25, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 25 after the add", 25, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 35);
-		assertEquals("Tail of list must be 35 after the add", 35, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 35 after the add", 35, (testList.get( testList.size( ) - 1 )).intValue());
 		testList.add( 45);
-		assertEquals("Tail of list must be 45 after the add", 45, (testList.get( testList.size( ) -1 )).intValue());
+		assertEquals("Tail of list must be 45 after the add", 45, (testList.get( testList.size( ) - 1 )).intValue());
 	}
 
 
